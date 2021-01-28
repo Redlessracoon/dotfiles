@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# nvim
+mkdir -p ~/.config/nvim/plugin
+mkdir -p ~/.config/nvim/after
+
+# find all .vim and .lua files
+for f in `find . -regex ".*\.vim$" | cut -d'/' -f3-`; do
+
+    # remove existing files
+    rm -rf ~/.config/nvim/$f
+
+    # link new files
+    ln -s ~/dotfiles/nvim/$f ~/.config/nvim/$f
+done

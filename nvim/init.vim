@@ -1,5 +1,8 @@
 set exrc
 
+" Remap leaderkey
+let mapleader = " "
+
 call plug#begin('~/.vim/plugged')
 
 " Telescope dependencies
@@ -10,9 +13,17 @@ Plug 'nvim-telescope/telescope.nvim'
 " Language specific plugins
 Plug 'dart-lang/dart-vim-plugin'
 
-" LSP
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+" Gutters like in VS Code when changing a line
+Plug 'airblade/vim-gitgutter'
+
+" Pretty NerdTree & Co
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Tmux interaction
+Plug 'christoomey/vim-tmux-navigator'
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -32,15 +43,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
-let mapleader = " "
-
-" Maybe change later
-" Keybidings for lsp
-let g:lsc_auto_map = v:true
-
 " Yank and paste to system clipboard
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+noremap <Leader>y "+y
+" noremap <Leader>p "+p
 
 fun! TrimWhitespace()
     let l:save = winsaveview()

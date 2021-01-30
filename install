@@ -5,7 +5,7 @@ mkdir -p ~/.config/nvim/plugin
 mkdir -p ~/.config/nvim/after
 
 # find all .vim and .lua files
-for f in `find . -regex ".*\.vim$" | cut -d'/' -f3-`; do
+for f in `find . -regex ".*\.vim$\|.*\.json$" | cut -d'/' -f3-`; do
 
     # remove existing files
     rm -rf ~/.config/nvim/$f

@@ -1,4 +1,4 @@
-let g:a_colorscheme = "gruvbox"
+let g:alexandriada_colorscheme = "gruvbox"
 fun! ColorMyPencils()
     colorscheme gruvbox
     set background=dark

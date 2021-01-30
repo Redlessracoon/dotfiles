@@ -1,3 +1,11 @@
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+
+" Automaticaly close nvim if NERDTree is only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Toggle
 nmap <C-e> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 
@@ -17,4 +25,4 @@ function! SyncTree()
 endfunction
 
 " Highlight currently open buffer in NERDTree
-" autocmd BufEnter * call SyncTree()
+autocmd BufRead * call SyncTree()

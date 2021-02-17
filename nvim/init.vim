@@ -12,6 +12,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Language specific plugins
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'iloginow/vim-stylus'
 
 " Gutters like in VS Code when changing a line
 Plug 'airblade/vim-gitgutter'

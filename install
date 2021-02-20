@@ -3,6 +3,7 @@
 # nvim
 mkdir -p ~/.config/nvim/plugin
 mkdir -p ~/.config/nvim/after
+mkdir -p ~/.config/nvim/ftplugin
 
 # find all .vim and .lua files
 for f in `find . -regex ".*\.vim$\|.*\.json$" | cut -d'/' -f3-`; do
